@@ -115,7 +115,7 @@ section {
   display: block;
 }
 
-ul {
+ul, ol {
   list-style: none;
 }
 

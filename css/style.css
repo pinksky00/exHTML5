@@ -1,10 +1,9 @@
 @charset "utf-8";
+@import url("./normalize.css");
+@import url("./reset.css");
 
 .container {
   background-color: silver;
-}
-.header {
-  background-color: yellow;
 }
 .visual {
   background-color: lime;
@@ -28,14 +27,23 @@
   overflow: hidden;
   margin: -1px;
   clip: rect(0,0,0,0);
-  clip-path: polygon(0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0); /* 스크린리더가 읽지 않게하기위한 소스 */
 }
 /* 레이아웃 */
 *, *::before, *::after {
   box-sizing: border-box;
 }
+html {
+  font-size: 10px;
+}
 body {
-  margin: 0;
+  color: #181818;
+  font-size: 1.4rem; /* html에 상속되어있는 폰트 사이즈를 계산하여 표시해주는 단위, 구형 브라우저에서는 지원X */
+}
+/* 링크 스타일 */
+a {
+  color: inherit; /* a는 상속색상으로 주는게 좋음 */
+  text-decoration: none; /* 링크텍스트 밑줄 제거 */
 }
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
@@ -43,7 +51,34 @@ body {
 }
 /* 헤더 */
 .header {
-   
+  background-color: #fff; 
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  padding: 0 30px;
+}
+/* 로고 */
+.logo {
+  position: absolute;
+  background-color: rgba(255,0,0,0.5);
+  top: 45px;
+  left: 65px;
+}
+/* 멤버 링크 */
+.member {
+  text-align: right;
+  font-size: 0;
+  padding: 2px 0;
+  margin-right: -10px; /* 마진만 -값을 사용 할 수 있음 */
+}
+.member li, .member a {
+  display: inline-block;
+}
+.member li {
+  text-transform: uppercase; /* 영문을 대문자로 바꿔줌 */
+  font-size: 1.4rem; /* 글자간 여백을 없애기 위해 부모 member에서 0으로 만든다음 li에서 다시 폰트 사이즈를 줌 */
+}
+.member a {
+  padding: 5px; /* 여백까지 버튼 영역이 되기 때문에 사용성 좋음 */
 }
 /* 비주얼 */
 .visual {
