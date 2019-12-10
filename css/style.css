@@ -90,6 +90,9 @@ a {
   /* overflow: hidden;  float때문에 높이값을 잃은 부모에게 넘치는 값에 대한 설정을 통해 높이값을 되찾아줌 */
   padding-left: 228px;
   border-top : 2px solid #181818;
+  border-radius: 0 0 5px 5px;
+  background: rgb(215,0,0);
+  background: linear-gradient(37deg, rgba(215,0,0,1) 0%, rgba(105,26,0,1) 100%);
 }
 .menu > li {
   /* 구조선택자. 가급적이면 구조선택자를 사용하지 않는 class 기반으로 작업 할 것. (개발에서 무너질 수 있음) */
@@ -122,7 +125,7 @@ a {
   top: 47px;
   display: none;
 }
-.meun-act .sub-menu {
+.menu-act .sub-menu {
   display: flex;
 }
 .sub-menu li {
