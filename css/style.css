@@ -21,7 +21,15 @@
 .footer {
   background-color: pink;
 }
-
+/* 숨긴컨텐츠 */
+.a11y-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
 /* 레이아웃 */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -35,21 +43,22 @@ body {
 }
 /* 헤더 */
 .header {
-  height: 10vh; /* vh : 실제화면에서 보여지는 사이즈 */
+   
 }
 /* 비주얼 */
 .visual {
-  height: 10vh;
+  height: 10vh; /* vh : 실제화면에서 보여지는 사이즈 */
 }
 /* 메인 */
 .main {
   padding: 30px;
   height: 60vh;
-  display: flex; /* flex-direction: row; flew-wrap: nowrap; 를 추가 한 것과 같다 */
+  display: flex; /* flex-direction: row; flex-wrap: nowrap; 를 추가 한 것과 같다 */
   flex-direction : row;
   /* justify-content: space-evenly; 자동으로 group의 사이간격 계산해줌.그러나 IE 11 지원안함 */
   justify-content: space-between; /* IE11에서 space-evenly과 비슷한 효과를 내줌 */
-  /* align-items: flex-start; 컨텐츠들 높이에 맞춤 */
+  /* align-items: flex-start; 컨텐츠들 높이에 맞춰서 중앙정렬 */
+  align-items: stretch; /* 컨텐츠들 높이에 맞춤 */
 } /* main W10 IE11에서는 적용되나 그 외 IE에서는 main소스 없음 */
 .group {
   background-color: red;
