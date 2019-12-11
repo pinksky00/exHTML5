@@ -78,7 +78,6 @@ a {
   border-radius: 0 0 5px 5px;
   background: rgb(215,0,0);
   background: linear-gradient(37deg, rgba(215,0,0,1) 0%, rgba(105,26,0,1) 100%);
-
 }
 .menu > li {
   /* 구조선택자. 가급적이면 구조선택자를 사용하지 않는 class 기반으로 작업 할 것. (개발에서 무너질 수 있음) */
@@ -282,6 +281,49 @@ a {
   margin-bottom: 10px;
   display: block;
   /* 여백도 눌려야 하기 때문에 a에 css가 적용되어야 한다 */
+}
+/* 웹 관련 용어 */
+.term {
+  background: linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.term .term-list {
+   /* overflow: hidden;
+  float를 사용하여 부모속성이 높이값을 잃는것을 없애기위한 속성. 그러나 오류가 있기때문에 완벽한 대안은 아님 */
+}
+.term .term-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.term .term-list-thumbnail {
+  float: left;
+}
+.term .term-list-subject {
+  color: darkblue;
+  margin-bottom: 5px;
+  font-weight: 400;
+  /* flaat를 오른쪽으로 치우져서 조절이 어려운게 아니라 넓이 값을 주면 제어가능 */
+}
+.term .term-list-subject, .term .term-list-brief {
+  float: right;
+  width: 145px;
+}
+.term-list-thumbnail img {
+  vertical-align: middle;
+}
+.term-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* float로 잃은 높이값을 위한 소스 */
+.clearfix {
+  /* clear: both;
+   float의 영향권에서 벗어나는 소스 html의 가장 마지막에 <div class="clearfix"></div>를 추가하면된다 */
 }
 /* 술로건 */
 .slogan {
