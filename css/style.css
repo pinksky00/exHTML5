@@ -3,6 +3,7 @@
 @import url("./fontello.css");
 @import url("./normalize.css");
 @import url("./reset.css");
+@import url("./animation.css");
 
 .container {
   background-color: silver;
@@ -144,12 +145,55 @@ a {
 }
 /* 비주얼 */
 .visual {
-  height: 10vh; /* vh : 실제화면에서 보여지는 사이즈 */
+  height: 120px;
+  position: relative;
+  
+}
+.visual-text {
+  background-color: #ff0;
+  animation-name: textAni; 
+  animation-duration: 500ms;
+  /* 애니메이션 호출 필수 값 : 이름, 애니메이션 지속시간 */
+  animation-fill-mode: forwards;
+  /* 애니메이션이 끝난다음 바뀐사항 유지 */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+  width: 500px;
+}
+.visual::before, .visual::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  content: "";
+  /* 가상선택자 before, after는 가상이기 때문에 아무 콘텐츠를 가지고 있지않아 필수로 content: ""; 넣어주어야 구현됨  */
+  /* animation-name: bgAni; */
+  /* animation-duration: 1000ms; */
+  /* animation-iteration-count: infinite; */
+  /* infinite : 애니메이션 무한 반복 */
+  /* animation-direction: alternate; */
+  /* 애니메이션을 앞뒤로 반복 */
+  /* animation-play-state: paused;
+   애니메이션 일시정지 기능 */
+   animation: bgAni 1000ms infinite alternate;
+   /* 위의 소스를 하나로 축약 가능 */
+}
+.visual::before {
+  background-image: url("./images/ani_flower_01.png"), url("./images/ani_flower_02.png");
+  background-position: 0 -10px, 670px 5px;
+}
+.visual::after {
+  background-image: url("./images/ani_flower_03.png"), url("./images/ani_flower_04.png");
+  background-position: 300px 10px, 800px 0;
+  animation-delay: 500ms;
+  /* 애니메이션 딜레이를 주어 각 레이어끼리 교차되도록 함 */
 }
 /* 메인 */
 .main {
   padding: 30px;
-  height: 60vh;
+  height: 60vh; /* vh : 실제화면에서 보여지는 사이즈 */
   display: flex; /* flex-direction: row; flex-wrap: nowrap; 를 추가 한 것과 같다 */
   flex-direction : row;
   /* justify-content: space-evenly; 자동으로 group의 사이간격 계산해줌.그러나 IE 11 지원안함 */
