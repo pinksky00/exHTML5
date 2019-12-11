@@ -145,7 +145,32 @@
       </p>
     </div>
     <main class="main">
-      <div class="group group1">그룹1</div>
+      <div class="group group1">
+        <section class="login">
+          <h2 class="login-heading">로그인</h2>
+        </section>
+        <form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="login-form">
+          <fieldset>
+            <legend>회원 로그인 폼</legend>
+            <div class="user-email">
+              <label for="userEmail">아이디</label>
+              <!-- input에 id값을 줘 라벨 for로 넣어줘야 연결된 것을 명시 할 수 있음  -->
+              <input type="email" id="userEmail" name="userEmail" required placeholder="guest@web.com"> 
+              <!-- required는 필수로 들어가야하는 것을 명시하기 위한 소스, 입력하지 않으면 안넘어감 -->
+              <!-- placeholder : 힌트 -->
+            </div>
+            <div class="user-pw">
+              <label for="userPw">비밀번호</label>
+              <input type="password" id="userPw" name="userPw" required placeholder="8자리 이상">
+            </div>
+            <button class="btn-login" type="submit">로그인</button>
+          </fieldset>
+        </form>
+        <ul class="sign">
+          <li><a href="/">회원가입</a></li>
+          <li><a href="/">아이디/비번 찾기</a></li>
+        </ul>
+      </div>
       <div class="group group2">그룹2</div>
       <div class="group group3">그룹3</div>
     </main> <!-- main은 IE11에서 지원안함 : HTML5 shiv 사용 필요 -->
