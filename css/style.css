@@ -325,6 +325,38 @@ a {
   /* clear: both;
    float의 영향권에서 벗어나는 소스 html의 가장 마지막에 <div class="clearfix"></div>를 추가하면된다 */
 }
+/* 검색폼 */
+.search-form {
+  background: linear-gradient(#ccc, #eee);
+  border-radius: 15px 15px 0 0;
+  height: 50px;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  padding: 15px 25px 15px;
+}
+.search-form fieldset {
+}
+.search-form * {
+  vertical-align: top;
+  /* 글자가 떨어진다면 *으로 호출하여 중앙정렬 혹은 위로 올릴 수 있다 */
+}
+.search-form [type="search"] {
+  width: 200px;
+  padding: 1px 1px 1px 0.5em;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+.btn-search {
+  background-color: #222;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 24px;
+  padding: 0 11px;
+  margin-left: 2px;
+}
 /* 술로건 */
 .slogan {
   height: 10vh;

@@ -199,7 +199,25 @@
           </dl>
         </section>
       </div>
-      <div class="group group2">그룹2</div>
+      <div class="group group2">
+        <!-- <div class="search">
+          <div class="search-form">
+              <label for="search">자료검색</label>
+              <input type="text" id="search" name="search" required placeholder="검색어를 입력하세요">
+            </div>
+          <button class="btn-search">검색</button>
+        </div> -->
+        <h2 class="a11y-hidden">검색</h2>
+        <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="search-form">
+          <fieldset>
+            <legend>검색 폼</legend>
+            <label for="search"><span class="icon-search"></span>자료검색</label>
+            <input type="search" id="search" name="search" placeholder="검색어를 입력하세요." required>
+            <button type="submit" class="btn-search">검색</button>
+            <!-- submit : 전송 -->
+          </fieldset>
+        </form>
+      </div>
       <div class="group group3">그룹3</div>
     </main> <!-- main은 IE11에서 지원안함 : HTML5 shiv 사용 필요 -->
     <article class="slogan">슬로건</article>
