@@ -15,6 +15,10 @@
   clip-path: polygon(0 0, 0 0, 0 0); /* 스크린리더가 읽지 않게하기위한 소스 */
   position: absolute;
 }
+/* 컨텐이너 */
+.container {
+  background: url("./images/bg_flower.png") no-repeat 50% 0, #ccc linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
+}
 /* 레이아웃 */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -134,7 +138,6 @@ a {
   
 }
 .visual-text {
-  background-color: #ff0;
   animation-name: textAni; 
   animation-duration: 500ms;
   /* 애니메이션 호출 필수 값 : 이름, 애니메이션 지속시간 */
@@ -177,7 +180,7 @@ a {
 /* 메인 */
 .main {
   padding: 30px;
-  height: 60vh; /* vh : 실제화면에서 보여지는 사이즈 */
+  /* height: 60vh;  vh : 실제화면에서 보여지는 사이즈 */
   display: flex; /* flex-direction: row; flex-wrap: nowrap; 를 추가 한 것과 같다 */
   flex-direction : row;
   /* justify-content: space-evenly; 자동으로 group의 사이간격 계산해줌.그러나 IE 11 지원안함 */
@@ -421,7 +424,7 @@ a {
   right: -8px;
   padding: 8px;
 }
-.board .icon-plus::before {
+.icon-plus::before {
   color: hsla(110, 70%, 30%, 1);
   /* 명도 채도 밝기 알파 */
 }
@@ -453,11 +456,100 @@ a {
   position: absolute;
   margin-top: 5px;
 } */
+/* 새소식 */
+.news {
+  margin-top: 20px;
+  position: relative;
+  min-height: 170px;
+  /* 컨텐츠가 작았을 떄를 위해 최소 높이 줄 것 */
+}
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #ccc linear-gradient(90deg, #ccc, #fff);
+}
+.news-heading {
+  color: orangered;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.mews-item {
+  margin-top: 35px;
+}
+.news-item-link {
+  display: block;
+  position: relative;
+  padding-left: 130px;
+}
+.news-item-subject {
+  font-weight: 400;
+}
+.news-item-brief {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.news-item-thumbnail {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  text-align: center;
+}
+.news-item-thumbnail img {
+  margin-bottom: 15px;
+  box-shadow: 0 15px 15px 0 #aaa;
+}
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
 /* 술로건 */
 .slogan {
-  height: 10vh;
+  padding: 10px 0;
+  position: relative;
+  padding: 10px 70px 10px 170px;
+}
+.slogan-heading {
+  width: 110px;
+  height: 83px;
+  text-align: center;
+  /* 텍스트를 가운대로 넣어서 이미지 뒤로 숨김 트릭 */
+  position: absolute;
+  /* padding-top: 83px;
+  overflow: hidden; 
+  
+  white-space: nowrap;
+  overflow: hidden;
+ 글자가 안보이게 하기위한 트릭 */
+ bottom: -25px;
+ left: 30px;
+}
+.slogan-content {
+  color: #a09784;
+  font-size: 1.4rem;
+}
+.director-name {
+  font-weight: 400;
+}
+.slogan-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/coffee.png") no-repeat;
 }
 /* 푸터 */
 .footer {
-  height: 10vh;
+  height: 30vh;
+  padding: 10px 0;
+}
+.footer-bg {
+  background: #ccc linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }

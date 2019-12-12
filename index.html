@@ -283,9 +283,53 @@
             <a href="/" class="pds-more" title="자료실"><span class="icon-plus"></span>더보기</a>
           </section>
         </div>
-        <div class="group group3">그룹3</div>
+        <section class="news">
+          <h2 class="news-heading">새소식</h2>
+          <article class="mews-item">
+            <a href="/" class="news-item-link">
+              <h3 class="news-item-subject">W3C 사이트가 리뉴얼 되었습니다.</h3>
+              <time class="news-item-date" datetime="2019-12-13T15:01:18"></time>
+              <!-- time에서는 datetime입력이 필수 -->
+              <p class="news-item-brif">
+                디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를위한 기술 가이드도 찾기 쉽도록 구성되어 있습니다.
+              </p>
+              <figure class="news-item-thumbnail">
+                <img src="./images/news.gif" alt="" aria-labelledby="newsItemCaption">
+                <!-- 아리아를 아래 id와 연결하여 스크린니리더가 읽을 수 있도록 한다 -->
+                <figcaption id="newsItemCaption">W3C 리뉴얼</figcaption>
+              </figure>
+              <!-- figure: 뉴스 사이트 처럼 영상같은 썸네일을 넣는 태그 -->
+            </a>
+          </article>
+          <!-- <di>
+            <dt>WSC 사이트가 리뉴얼 되었습니다.
+                <time datetime="2019-12-12T11:14:09">2019.12.12</time>
+            </dt>
+            <dd>
+              <img>
+              <p>W3C 리뉴얼</p>
+            </dd>
+            <dd>디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를위한 기술 가이드도 찾기 쉽도록 구성되어 있습니다.</dd>
+            <dd></dd>
+          </di> -->
+          <a href="/" class="news-more" title="새소식"><span class="icon-plus"></span>더보기</a>
+        </section>
+      </div>
+      <div class="group group3">그룹3</div>
     </main> <!-- main은 IE11에서 지원안함 : HTML5 shiv 사용 필요 -->
-    <article class="slogan">슬로건</article>
+    <article class="slogan">
+      <h2 class="slogan-heading" title="웹카에서 웹표준을">슬로건</h2>
+      <p class="slogan-content">
+        <q cite="http://w3.org/WAI">The power of the Web is in its universality, Access by everyone regardless of
+          disability is an essential aspect.</q>
+        <span class="director-name">Tim Berners - Lee , W3C Director and inventor of the World Wide Web</span>
+      </p>
+      <footer class="a11y-hidden">
+        출처 : W3C, http://w3.org/WAI/
+      </footer>
+      <!-- 인용인것을 나타내기 위해 q태그를 사용 -->
+      </p>
+    </article>
     <div class="footer-bg">
       <footer class="footer">푸터</footer>
     </div>
