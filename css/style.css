@@ -357,6 +357,102 @@ a {
   padding: 0 11px;
   margin-left: 2px;
 }
+/* 공지사항 및 자료실 */
+.board {
+  margin-top: 20px;
+  position: relative;
+  padding-top: 45px;
+}
+.board [class*="-list"], .board [class*="-more"] {
+  display: none;
+}
+.tab-act [class*="-list"], .board [class*="-more"] {
+  display: block !important;
+}
+.tab {
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  color: #222;
+  background: #ccc linear-gradient(#ccc, #eee);
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+.tab-act .tab {
+  background: #fff;
+  border-color: rgb(240,81,11) rgb(240,81,11) #fff rgb(240,81,11);
+  /* 선뿐만 아니라 색도 원하는 곳마다 줄 수 있음 */
+  color: orangered;
+  z-index: 10;
+  /* 활성화 한 탭을 가장 위로 올리기 위해 */
+  outline: 0;
+  /* outline: 0; 버튼 선택시 파란선을 없애기 위해서 0을 줌. 전체에 주면 포커스가 사라지기 때문에 활성화가 된 항목에만 줌 */
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 72px;
+}
+/* * = 포함하고 있는 */
+
+.board [class*="-list"] li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* flex이기 때문에 사용할 수 있음 // justify-content: space-between; : 오른쪽 정렬 */
+  align-items: center;
+}
+.board [class*="-list"] a {
+  width: 300px;
+  white-space: nowrap;
+  /* white-space: nowrap; : 줄이 넘어가면 아래 단이 내려가는 것이 아니라 한줄로 되는 것 */
+  overflow: hidden;
+  /* overflow: hidden; : 넘어가는 텍스트 히든 */
+  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; : 히든이 되면 말줌임표로 나옴 */
+  padding: 5px 0;
+}
+.board [class*="-more"] {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+.board .icon-plus::before {
+  color: hsla(110, 70%, 30%, 1);
+  /* 명도 채도 밝기 알파 */
+}
+/* .notice, .pds {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pds-heading {
+  margin-left: 70px;
+}
+.notice-list {
+  
+}
+.notice-heading, .pds-heading {
+  background: linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 7px 7px 0 0;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  padding-top: 4px;
+  color: #222;
+  font-weight: 500;
+}
+.notice-more, .pds-more {
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin-top: 5px;
+} */
 /* 술로건 */
 .slogan {
   height: 10vh;
