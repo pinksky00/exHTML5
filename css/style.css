@@ -508,6 +508,96 @@ a {
   right: -8px;
   padding: 8px;
 }
+/* 신규 이벤트 및 관련 사이트 */
+.event-related {
+  background: #ccc linear-gradient(#ccc, #eee);
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px; 
+}
+.event-heading, .related-heading {
+  font-weight: 700;
+  color: #181818;
+  font-size: 1.5rem;
+}
+.point-color {
+  color: orangered;
+}
+.event p {
+  margin: 10px 0;
+}
+.event-thumbnail img {
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+.event {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+}
+.btn-event {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  height: 18px;
+  /* 파이어 폭스 브라우저에서 높이 값을 없애기 위하여 부모에게 높이를 지정하고 자식에서 100%를 줌 */
+}
+.btn-event-prev, .btn-event-next {
+  width: 19px;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  /* 브라우저마다 버튼의 보더, 색상, 여백이 틀리기때문에 해당 소스를 입력해줘야함 */
+  background: url("./images/back_forward.png") no-repeat;
+}
+.btn-event-prev {
+  background-position: 0 0;
+}
+.btn-event-next {
+  background-position: -36px 0;
+}
+.related {
+  margin-top: 10px;
+}
+.related-list {
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 27px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  /* transition-property: background, height, padding; */
+  /* 트렌지션이 일어날 속성 지정 */
+ /*  transition-duration: 2s, 2s, 2s; */
+  /* 바뀌는 중간단계 소스 */
+/*   transition-delay: 4s, 0s, 2s;
+ */  /* 딜레이로 적용 */
+/*   transition-timing-function: ease-in-out;
+ */  transition: all 0.4s 0s ease-in-out;
+ /* all는 내부에 있는 css모두에 적용됨 */
+ margin-top: 10px;
+}
+.related-list li {
+  padding: 2px;
+}
+.related-list a {
+  line-height: 21px;
+  display: block;
+  /* 버튼이 전체 다 눌릴수 있도록 블록 처리  */
+  text-indent: 1em;
+  /* 글자 들여쓰기 속성  */
+}
+.related-list a:hover {
+  color: orangered;
+}
+.related-list:hover {
+  height: 140px;
+  padding: 10px 0;
+}
+.event-brief em {
+  font-weight: 400;
+}
 /* 술로건 */
 .slogan {
   padding: 10px 0;
