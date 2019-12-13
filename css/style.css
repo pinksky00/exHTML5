@@ -698,10 +698,46 @@ a {
   background: url("./images/coffee.png") no-repeat;
 }
 /* 푸터 */
-.footer {
-  height: 30vh;
-  padding: 10px 0;
-}
 .footer-bg {
   background: #ccc linear-gradient(#ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
+.footer {
+  padding: 20px 100px 10px 170px;
+  position: relative;
+}
+/* 푸터로고 */
+.footer-logo {
+  position: absolute;
+  left: 34px;
+  top: 34px;
+}
+/* 가이드 링크 */
+.guide-list {
+  background: #7b8385;
+  color: #fff;
+  display: flex;
+  text-transform: uppercase;
+  /* 텍스트 대소문자 변경 */
+  border-radius: 12px;
+  justify-content: space-around;
+  /*  */
+  padding: 2px 15px;
+}
+/* 웹표준 기술 로고 */
+.guide-list a {
+  display: block;
+  padding: 5px 10px;
+}
+/* 주소및 저작권 */
+.address span {
+  margin-right: 1em;
+}
+.address {
+  padding-top: 20px;
+}
+.badge {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
