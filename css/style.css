@@ -515,7 +515,7 @@ a {
   border: 1px solid #aaa;
   padding: 10px; 
 }
-.event-heading, .related-heading {
+.event-heading, .related-heading, .favorite-heading {
   font-weight: 700;
   color: #181818;
   font-size: 1.5rem;
@@ -597,6 +597,68 @@ a {
 }
 .event-brief em {
   font-weight: 400;
+}
+/* 인기 사이트 */
+.favorite {
+  margin-top: 20px;
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+.favorite-more {
+  position: absolute;
+  padding: 8px;
+  top: 4px;
+  right: 2px;
+}
+.favorite-list li {
+  counter-increment: number;
+  margin-top: 10px;
+  display: flex;
+  /* flex로 라인이 맞지않는 개체를 맞출 수 있다 */
+  align-items: center;
+}
+.favorite-list li::before {
+  content: counter(number);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0 6px 2px 6px;
+  background-color: #aaa;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.favorite-list {
+  counter-reset: number;
+}
+/* counter-reset: number;, content: counter(number);, counter-increment: number; 이 아래에서 축약된 소스 */
+/* .no1::before {
+  content: "1";
+}
+.no2::before {
+  content: "2";
+}
+.no3::before {
+  content: "3";
+}
+.no4::before {
+  content: "4";
+} */
+.up, .stop, .down {
+  background: url("./images/rank.png") no-repeat;
+  width: 9px;
+  height: 11px;
+  margin-left: auto;
+}
+.up {
+  background-position: 0 0;
+}
+.down {
+  background-position: 0 100%;
+}
+.stop {
+  background-position: 0 50%;
 }
 /* 술로건 */
 .slogan {
